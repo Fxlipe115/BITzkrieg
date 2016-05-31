@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Define a direção da bala sendo igual a do tanque
+            <string>event_inherited();
+//Define a direção da bala sendo igual a do tanque
 direction = obj_tankPlayer02.face;
 
 //Trava a imagem da bala

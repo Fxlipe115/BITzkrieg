@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>if(keyboard_check_pressed(global.pause)){
+    audio_stop_all();
     global.players2 = false;
     global.vidas1=3;
     global.vidas2=3;
@@ -54,7 +55,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.players2 = false;
+            <string>audio_stop_all();
+
+global.players2 = false;
 room_goto(rm_test);
 
 global.vidas1=3;

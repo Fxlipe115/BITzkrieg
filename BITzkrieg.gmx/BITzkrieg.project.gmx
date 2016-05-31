@@ -5,7 +5,12 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound">
+    <sound>sound\snd_bhiiiir</sound>
+    <sound>sound\snd_menu3</sound>
     <sound>sound\snd_explosion</sound>
+    <sound>sound\snd_death</sound>
+    <sound>sound\snd_fire</sound>
+    <sound>sound\snd_level</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="tanks">
@@ -152,6 +157,8 @@
     <objects name="controle">
       <object>objects\obj_controle</object>
       <object>objects\obj_input</object>
+      <object>objects\obj_SFX_main</object>
+      <object>objects\obj_SFX_level</object>
     </objects>
     <objects name="powerups">
       <object>objects\obj_powerup</object>

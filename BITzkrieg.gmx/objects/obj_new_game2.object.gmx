@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.players2 = true;
+            <string>audio_stop_all();
+
+global.players2 = true;
 
 global.vidas1=3;
 global.vidas2=3;

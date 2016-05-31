@@ -837,6 +837,7 @@
     <instance objName="obj_border" x="792" y="72" name="inst_D3577807" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_border" x="816" y="48" name="inst_789D4E42" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_border" x="840" y="48" name="inst_1C49FB26" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_SFX_level" x="24" y="0" name="inst_AC081611" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
