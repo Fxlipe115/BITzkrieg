@@ -30,7 +30,7 @@
     global.players2 = false;
     global.vidas1=3;
     global.vidas2=3;
-    room_goto(rm_test);
+    room_goto(rm_test01);
 }
 
 </string>
@@ -58,7 +58,7 @@
             <string>audio_stop_all();
 
 global.players2 = false;
-room_goto(rm_test);
+room_goto(rm_test01);
 
 global.vidas1=3;
 global.vidas2=3;

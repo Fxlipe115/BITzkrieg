@@ -28,7 +28,7 @@
             <string>event_inherited();
 
 //Define a direção da bala sendo igual a do tanque
-direction = obj_tankEnemy01.face;
+direction = obj_tankEnemy01.dir;
 //Velocidade da bala
 speed = BULLETSPEED1;
 //Trava a imagem da bala

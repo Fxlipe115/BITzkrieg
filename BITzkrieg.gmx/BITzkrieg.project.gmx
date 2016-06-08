@@ -55,6 +55,10 @@
         <sprite>sprites\spr_enemyUp01</sprite>
         <sprite>sprites\spr_enemyLeft01</sprite>
         <sprite>sprites\spr_enemyDown01</sprite>
+        <sprite>sprites\spr_enemyRight02</sprite>
+        <sprite>sprites\spr_enemyUp02</sprite>
+        <sprite>sprites\spr_enemyLeft02</sprite>
+        <sprite>sprites\spr_enemyDown02</sprite>
       </sprites>
     </sprites>
     <sprites name="bullets">
@@ -95,6 +99,8 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\pickNewDirection.gml</script>
+    <script>scripts\pickRandomDirection.gml</script>
+    <script>scripts\noBlocks.gml</script>
     <script>scripts\canMoveForward.gml</script>
     <scripts name="controles">
       <script>scripts\resetInput.gml</script>
@@ -107,6 +113,7 @@
     <scripts name="moveLvl1">
       <script>scripts\moveLvl1.gml</script>
     </scripts>
+    <script>scripts\interception.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font0</font>
@@ -123,6 +130,7 @@
       <object>objects\obj_tank</object>
       <object>objects\obj_tankPlayer</object>
       <object>objects\obj_tankEnemy01</object>
+      <object>objects\obj_tankEnemy02</object>
       <object>objects\obj_tankPlayer01</object>
       <object>objects\obj_tankPlayer02</object>
     </objects>
@@ -177,7 +185,8 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main</room>
-    <room>rooms\rm_test</room>
+    <room>rooms\rm_test01</room>
+    <room>rooms\rm_test02</room>
     <room>rooms\rm_config</room>
   </rooms>
   <help>

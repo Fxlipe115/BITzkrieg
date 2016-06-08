@@ -21,7 +21,7 @@ switch (argument0){
         break;
     //cima
     case 90:
-        instance_create(x+24,y+2,bullet);
+        instance_create(x+24,y-2,bullet);
         break;
     //esquerda
     case 180:
@@ -29,6 +29,6 @@ switch (argument0){
         break;
     //baixo
     case 270:
-        instance_create(x+24,y+52,bullet);
+        instance_create(x+24,y+50,bullet);
         break;
 }

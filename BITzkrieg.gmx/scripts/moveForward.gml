@@ -1,19 +1,16 @@
 //moveForward()
 //Pega a direção atual e continua andando
 
-//Direita
-if (dir=0){
-    x = x+spd;
+if (dir==0){ //Direita
+    x+=spd;
 }
-//Cima
-else if (dir=90){
-    y = y-spd;
+if (dir==90){ //Para cima
+    y-=spd;
 }
-//Esquerda
-else if (dir=180){
-    x = x-spd;
+if (dir==180){ //Esquerda
+    x-=spd;
 }
-//Baixo
-else{
-    y = y+spd;
+if (dir==270){ //Para baixo
+    y+=spd;
 }
+

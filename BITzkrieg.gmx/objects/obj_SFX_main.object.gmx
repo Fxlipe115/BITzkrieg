@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>audio_play_sound(snd_menu3,10,true);
+            <string>if (audio_is_playing(snd_menu3)==false){
+        audio_play_sound(snd_menu3,10,true);
+}
 </string>
           </argument>
         </arguments>

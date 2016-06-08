@@ -26,37 +26,42 @@
           <argument>
             <kind>1</kind>
             <string>event_inherited();
+
 //Setando uma direção(para baixo) e uma velocidade(5)
 dir = 270;
-spd = 4;
-face = 3
-
+spd = 3;
+face = 3; 
+//seta o alarm[0] para 2 a 4 segundos
+alarm[0] = irandom_range(60,120);
+alarm[1] = irandom_range(60,150);
 
 </string>
           </argument>
         </arguments>
       </action>
+    </event>
+    <event eventtype="2" enumb="1">
       <action>
         <libid>1</libid>
-        <id>301</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_set_alarm</functionname>
+        <exetype>2</exetype>
+        <functionname></functionname>
         <codestring></codestring>
         <whoName>self</whoName>
-        <relative>-1</relative>
+        <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>0</kind>
-            <string>45</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
+            <kind>1</kind>
+            <string>pickNewDirection();
+moveForward();
+
+alarm[1] = irandom_range(30,150);
+</string>
           </argument>
         </arguments>
       </action>
@@ -104,25 +109,24 @@ face = 3
       </action>
       <action>
         <libid>1</libid>
-        <id>301</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_set_alarm</functionname>
+        <exetype>2</exetype>
+        <functionname></functionname>
         <codestring></codestring>
         <whoName>self</whoName>
-        <relative>-1</relative>
+        <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>0</kind>
-            <string>45</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
+            <kind>1</kind>
+            <string>//reseta o alarm[0] para 2 a 5 segundos
+alarm[0] = irandom_range(60,120);
+
+</string>
           </argument>
         </arguments>
       </action>
@@ -144,10 +148,16 @@ face = 3
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/*if (atIntersection()=false and canMoveForward()=true){
+            <string>//if (canMoveForward()==true and atIntersection()==false){
     moveForward();
-}else{
-    //pickNewDirection();
+    /*if (noBlocks()==true){
+        //seta o alarm[1] para 2 a 6 segundos
+        alarm[1] = irandom_range(60,180)
+    }
+}
+if ((canMoveForward()==true and atIntersection()==true) or
+    canMoveForward()==false){
+    pickNewDirection();
     moveForward();
 }
 
@@ -171,7 +181,7 @@ face = 3
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/*Checando a direção do objeto:
+            <string>//Checando a direção do objeto:
 //Se estiver indo para a direita
 if (dir=0){
     sprite_index = spr_enemyRight01;
@@ -179,19 +189,19 @@ if (dir=0){
     face = 0;
 }
 //Se estiver indo para cima
-else if (dir=90){
+if (dir=90){
     sprite_index = spr_enemyUp01;
     image_speed = 1;
     face = 90;
 }
 //Se estiver indo para a esquerda
-else if (dir=180){
+if (dir=180){
     sprite_index = spr_enemyLeft01;
     image_speed = 1;
     face = 180;
 }
 //Se estiver indo para baixo
-else{
+if (dir=270){
     sprite_index = spr_enemyDown01;
     image_speed = 1;
     face = 270;

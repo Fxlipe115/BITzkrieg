@@ -28,8 +28,10 @@
             <string>event_inherited();
 
 dir = 90;
-spd = 4;
+spd = 3;
 face = dir;
+moving_x = false;
+moving_y = false;
 
 tier = 1;
 mines = 0;

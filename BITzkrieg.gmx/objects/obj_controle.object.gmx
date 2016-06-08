@@ -26,12 +26,15 @@
           <argument>
             <kind>1</kind>
             <string>//Inicia a seed
-//randomize();
+randomize();
+total_spawn = instance_number(obj_spawnEnemy);
+
 global.tank1Exists = false;
 global.tank2Exists = false;
 global.vidas1 = 3;
 global.vidas2 = 3;
 global.players2 = false;
+global.total_inimigos = total_spawn*(obj_spawnEnemy.spawn_number);
 </string>
           </argument>
         </arguments>
@@ -61,6 +64,7 @@ global.players2 = false;
 if(keyboard_check(global.back)){
     room_goto(rm_main);
 }*/
+total_inimigos = total_spawn*(obj_spawnEnemy.spawn_number);
 </string>
           </argument>
         </arguments>
@@ -84,7 +88,6 @@ if(keyboard_check(global.back)){
           <argument>
             <kind>1</kind>
             <string>global.players2 = true;
-audio_stop_all();
 </string>
           </argument>
         </arguments>

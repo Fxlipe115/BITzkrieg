@@ -112,9 +112,14 @@ global.tank1Exists = false;
           <argument>
             <kind>1</kind>
             <string>event_inherited();
+right = keyboard_check(global.direita1);
+up = keyboard_check(global.cima1);
+left = keyboard_check(global.esquerda1);
+down = keyboard_check(global.baixo1);
 
 //Movimentação do tanque
-if(keyboard_check(global.direita1)){
+if(right==true and moving_y==false){
+    moving_x = true;
     switch(tier){
     case 1:
         sprite_index = spr_tankRight01;
@@ -129,13 +134,14 @@ if(keyboard_check(global.direita1)){
         sprite_index = spr_tankRight04;
         break;
     }
-    image_speed = 1; 
     face = 0;   
-    if (/*place_meeting(x+spd,y,obj_block)=false &amp;&amp; */x+48 &lt; room_width){
+    image_speed = 1; 
+    if (/*place_meeting(x+spd,y,obj_block)=false and*/ x+48 &lt; room_width){
         x+=spd;
     }
 }
-if(keyboard_check(global.cima1)){
+if(up==true and moving_x==false){
+    moving_y = true;
     switch(tier){
     case 1:
         sprite_index = spr_tankUp01;
@@ -150,13 +156,15 @@ if(keyboard_check(global.cima1)){
         sprite_index = spr_tankUp04;
         break;
     }
-    image_speed = 1;
     face = 90
+    image_speed = 1;
     if  (/*place_meeting(x,y-spd,obj_block)=false &amp;&amp; */y &gt; 0){
         y-=spd;
+        
     }
 }
-if(keyboard_check(global.esquerda1)){
+if(left==true and moving_y==false){
+    moving_x=true;
     switch(tier){
     case 1:
         sprite_index = spr_tankLeft01;
@@ -171,13 +179,14 @@ if(keyboard_check(global.esquerda1)){
         sprite_index = spr_tankLeft04;
         break;
     }
-    image_speed = 1;
     face = 180;
+    image_speed = 1;
     if (/*place_meeting(x-spd,y,obj_block)=false &amp;&amp; */x &gt; 0){
         x-=spd;
     }
 }
-if(keyboard_check(global.baixo1)){
+if(down==true and moving_x==false){
+    moving_y=true;
     switch(tier){
     case 1:
         sprite_index = spr_tankDown01;
@@ -192,11 +201,20 @@ if(keyboard_check(global.baixo1)){
         sprite_index = spr_tankDown04;
         break;
     }
-    image_speed = 1;
     face = 270;
+    image_speed = 1;
     if (/*place_meeting(x,y+spd,obj_block)=false &amp;&amp; */y+48 &lt; room_height){
         y+=spd;
     }
+}
+if(right==false and left==false){
+    moving_x=false;
+}
+if(up==false and down==false){
+    moving_y=false;
+}
+if(moving_x==false and moving_y==false){
+    image_speed = 0;
 }
 
 </string>
