@@ -95,6 +95,7 @@
     <background>background\bg_main</background>
     <background>background\bg_terra</background>
     <background>background\ts_config</background>
+    <background>background\ts_logo</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
